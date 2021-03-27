@@ -2,8 +2,6 @@
 
 *{
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
 }
 
 body{
@@ -52,14 +50,15 @@ h1,h2,h3,h4,h5,h6 {
     font-family: 'Pacifico', cursive;
 }
 
-.main-header__contacInfo__phone{
-    background: #DE423A;
+.main-header__contactInfo__phone{
     color: white;
+    background: #DE423A;
+    
     margin: 0 auto;
     padding: 10px;
 }
 
-.main-header__contacInfo__address{
+.main-header__contactInfo__address{
     padding: 10px;
     margin: 0;
 }
@@ -119,7 +118,6 @@ seran los iconos de facebook, youtube, twitter. y deben estar dentro de
 }
 
 .menu {
-    /* display: none; */
     position: absolute;
     top: 60px;
     left: 0;
@@ -129,12 +127,19 @@ seran los iconos de facebook, youtube, twitter. y deben estar dentro de
     margin: 0;
     list-style: none;
     text-align: center;
-
     height: 0;
     overflow: hidden;
     transition: height .3s linear;
-    
 }
+
+/* .menu {
+    position: static;
+    display: flex;
+    height: auto;
+    width: auto;
+} */
+
+
 
 .menu__link{
     text-decoration: none;   
@@ -256,6 +261,231 @@ seran los iconos de facebook, youtube, twitter. y deben estar dentro de
     font-size: 1.5em;
     color: #DE423A;
     font-weight: bold;
+}
+
+/*-----------------------EStilos del footer--------------------------*/
+.main-footer{
+    background: #222;
+    color: white;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: .8em;
+}
+
+.copy{
+    text-align: center;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.main-footer [class*="icon-"] {
+    color: white;
+    text-decoration: none;
 
 
+}
+
+.main-footer [class*="icon-"]:before {
+    position: relative;
+    top: 3px;
+    right: 5px;
+}
+
+
+/*---------------Estilos responsive------------------------------*/
+
+@media screen and (min-width:480px){
+    .logo {
+        color: white;
+    }
+
+    .main-header__contactInfo {
+        text-align: right;
+    }
+
+    .banner {
+        margin-top: -180px;
+        z-index: -1000;
+    }
+
+    .banner__content {
+        font-size: 2em;
+        top: 70%;
+        left: 50%;
+    /* transform: translateX(-50%) translateY(-50%); */
+
+    }
+
+    .banner__img {
+        height: 500px;
+    }
+
+    .main {
+        padding-bottom: 15px;
+    }
+    .main-header__contactInfo__phone {
+        background: none;
+    }
+
+    .main-header__contactInfo__address {
+        color: white;
+    }
+
+
+    
+    
+    .main-nav {
+        background: rgba(0, 0, 0,0.85);
+    }
+    
+
+    .main__about__description .column:nth-child(2){
+        font-size: .9em;
+    }
+
+    .main__about__description .btn{
+        margin: 0;
+    }
+
+    .today-special .column {
+        border: 5px solid #ddd;
+        padding: 5px;
+    }
+
+    .today-special__img{
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .main-footer .container--flex {
+        align-items: flex-start;
+    }
+
+    .column--50 {
+        width: 49.5%;
+    }
+    .column--50-25 {
+        width: 49%;
+    }
+
+    .column--33 {
+        width: 33%;
+    }
+
+}
+
+@media screen and (min-width:768px){
+    .main__title {
+        font-size: 2.2em;
+    }
+    .main__about__description {
+        margin-top: 30px;
+    }
+
+    .main__about__description .column--50:nth-child(2){
+        font-size: 1em;
+    }
+    .main__about__description .column--50:nth-child(2) .column__txt{
+        line-height: 20px;
+    }
+
+    .column--50-25 {
+        width: 24.5%;
+    }
+
+    .column__title {
+        font-size: 1em;
+    }
+
+    .group__title {
+        font-size: 2.2em;
+    }
+}
+
+@media screen and (min-width:1024px){
+
+    .container {
+        width: 1000px;
+    }
+    
+    .logo {
+        font-size: 2em;
+        padding: 0;
+    }
+
+    .main-header__contactInfo__phone,
+    .main-header__contactInfo__address {
+        padding-right: 10px;
+        font-size: 1.15em;
+    }
+
+    .main-nav {
+        padding: 2px;
+    }
+
+    .banner__content {
+        font-size: 2.5em;
+    }
+
+    .icon-menu {
+        display: none;
+    }
+
+    .menu {
+        position: static;
+        display: flex;
+        height: auto;
+        width: auto;
+    }
+
+    .menu__link {
+        padding: 20px;
+    }
+
+    .group--color .container {
+        margin-top: 10px;
+    }
+
+    .main__title {
+        font-size: 2.5em;
+    }
+
+    .main__about__description .column--50:nth-child(2) .column__txt {
+        line-height: 40px;
+    }
+
+    .today-special__title {
+        font-size: 1.4em;
+    }
+
+    .today-special__price {
+        font-size: 1.8em;
+    }
+
+    .main-footer {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+}
+
+@media screen and (min-width:1600px){
+    .container {
+        width: 1600px;
+    }
+
+    .banner__img {
+        height: 600px;
+    }
+
+    .main__about__description .column:nth-child(1) img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+    }
+
+    .today-special__img {
+        height: 300px;
+    }
 }
