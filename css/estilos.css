@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Pacifico');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Montserrat',sans-serif ;
+    margin: 0;
+}
+
+/*-------------------------Estilos base------------------------------*/
+
+img{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+
+.container{
+    width: 100%;
+    margin: auto;
+}
+
+.container--flex {
+    display: flex;
+    flex-wrap: wrap; /* si el elemento no entra en el contenedor, lo situa debajo*/
+    justify-content: space-between;
+    align-items: center;
+}
+
+.column {
+    width: 100%;
+}
+
+/*----------------Estilos Header-------------------*/
+
+.main-header{
+    width: 100%;
+}
+
+ .logo{
+    font-size: 1.8em;
+    color: #DE423A;
+    padding: 10px;
+    font-family: 'Pacifico', cursive;
+}
+
+.main-header__contacInfo__phone{
+    background: #DE423A;
+    color: white;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.main-header__contacInfo__address{
+    padding: 10px;
+    margin: 0;
+}
+
+/*esta instruccion modifica todas las clases que empiezen con icon- (que 
+seran los iconos de facebook, youtube, twitter. y deben estar dentro de 
+.main-header). y la palabra before es para que se apliquen estos cambios
+ antes que los dibuje*/
+.main-header [class*="icon-"]:before {
+    position: relative;
+    top: 2px;
+    right:5px;
+}
+
+/*-----------------------Estilos del menu----------------------------*/
+
+.main-nav{
+    width: 100%;
+    position: relative;
+    z-index: 2000;
+    padding: 15px;
+}
+
+.icon-menu{
+    display: block;
+    color: white;
+    border: 1px solid white;
+    border-radius: 3px;
+    width: 40px;
+    height: 40px;
+    line-height: 45px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+.social-icon{
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-icon [class*="icon-"] {
+    color: black;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    width: 35px;
+    height: 35px;
+    background: white;
+    border-radius: 50%;
+}
+
+.social-icon__link{
+    text-decoration: none;
+}
+
+.menu {
+    /* display: none; */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.85);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+
+    height: 0;
+    overflow: hidden;
+    transition: height .3s linear;
+    
+}
+
+.menu__link{
+    text-decoration: none;   
+    display: block;
+    padding: 15px;
+    color: white;
+}
+
+.menu__link:hover{
+    background: #DE423A;
+}
+
+.menu__link--select {
+    background: #DE423A;
+}
+
+.mostrar{
+    height: 200px;
+
+}
+
+/*-----------------Estilos de banenr---------------------------*/
+
+.banner {
+    margin-top: -60px;
+    position: relative;
+}
+
+.banner:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0,0.7);
+    z-index: 1000;
+    top: 0;
+}
+
+.banner__img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover; /*permite que la imagen se acomode al ancho y alto, y no se distorsione*/
+}
+
+.banner__content {
+    width: 90%;
+    color: white;
+    text-align: center;
+    position: absolute;
+    z-index: 1500;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/*------------------------EStilos principales----------------------*/
+
+
+.group--color .container{
+    background: #DE423A;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.main__title{
+    margin: 15px 0;
+    font-size: 1.8em;
+    font-family: 'Pacifico', cursive;
+    font-weight: 100;
+}
+
+.column__title{
+    font-size: 1.3em;
+}
+
+.main__about__description .column:nth-child(2) {
+    padding: 10px;
+}
+
+.btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: #DE423A;
+    width: 120px;
+    color: white;
+    padding: 10px;
+    margin: 10px auto;
+}
+
+.group__title {
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    font-weight: 100; /* cuando se pone numero a esta propiedad, es para quitarle la sombra o contraste que tenga la letra, si se pone de opcion 'bold' es para darle al texto negrita*/
+    font-size: 1.8em;
+    margin: 30px;
+}
+
+.today-special .column {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.today-special__img {
+    margin: auto;
+    max-width: 350px;
+}
+
+.today-special__title {
+    font-size: 1.3em;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.today-special__price {
+    font-size: 1.5em;
+    color: #DE423A;
+    font-weight: bold;
+
+
+}
