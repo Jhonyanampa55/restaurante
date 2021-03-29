@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Inicio | Your first restaurant</title>
+    <title>Galeria | Your first restaurant</title>
 
     <!-- estilos propio -->
     <link rel="stylesheet" href="css/estilos.css">
@@ -13,10 +13,22 @@
     <!-- El archivo styles.css depende de la carpeta fonts para insertar los iconos.
     los iconos se descargaron de la pagina web http://fontastic.me/ -->
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/galeria.css">
 
 </head>
 
 <body>
+
+    <!--  Este objeto es para mostrar la imagen modal de la galeria -->
+    <div class="modal" id="modal">
+        <div class="modal__content">
+            <img src="img/plato4.jpg" class="modal__img" id="modal__img">
+        </div>
+        <div class="modal__boton" id="modal__boton">X</div>
+    </div>
+    <!-----------------------fin de modal---------------------->
+
+
 
     <header class="main-header">
         <div class="container container--flex">
@@ -38,9 +50,9 @@
         <div class="container container--flex">
             <span class="icon-menu" id="btnmenu"></span>
             <ul class="menu" id="menu">
-                <li class="menu__item"><a href="index.html" class="menu__link menu__link--select">Inicio</a></li>
+                <li class="menu__item"><a href="index.html" class="menu__link ">Inicio</a></li>
                 <li class="menu__item"><a href="nosotros.html" class="menu__link">Nosotros</a></li>
-                <li class="menu__item"><a href="galeria.html" class="menu__link">Galeria</a></li>
+                <li class="menu__item"><a href="galeria.html" class="menu__link menu__link--select">Galeria</a></li>
                 <li class="menu__item"><a href="contacto.html" class="menu__link">Contacto</a></li>
             </ul>
             <div class="social-icon">
@@ -52,62 +64,34 @@
     </nav>
 
     <section class="banner">
-        <img src="img/img1.jpg" alt="" class="banner__img">
-        <div class="banner__content">La mejor y exquisita comida esta aqui</div>
+        <img src="img/pexels-angele-j-128388.jpg" alt="" class="banner__img">
+        <div class="banner__content">Los mejores platos para deleitar tu paladar</div>
     </section>
 
     <main class="main">
-        <section class="group group--color">
-            <div class="container">
-                <h2 class="main__title">Bienvenido a su restaurante</h2>
-                <p class="main__txt">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-                    dignissimos ipsam expedita est adipisci voluptate id temporibus deserunt
-                    velit aperiam natus maxime quae molestiae, cumque officiis non vero aut dicta?
-                </p>
-            </div>
-        </section>
 
-        <section class="main__about__description">
-            <div class="container container--flex">
-                <div class="column column--50">
-                    <img src="img/img2.jpg" alt="">
-                </div>
-                <div class="column column--50">
-                    <h3 class="column__title">Expertise In Industrial Solution</h3>
-                    <p class="column__txt">Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Quo sint hic, neque vitae quidem modi quia earum iste id aut ipsa,
-                        eaque esse maxime dolor repellendus distinctio voluptas numquam odit!</p>
-                    <a href="" class="btn bnt--contact">Contact</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="group today-special">
-            <h2 class="group__title">Especial de hoy</h2>
+        <div class="group gallery">
+            <h2 class="group__title">Nuestra Galeria</h2>
             <div class="container container--flex">
                 <div class="column column--50-25">
-                    <img src="img/img3.jpg" alt="" class="today-special__img">
-                    <div class="today-special__title">Especial del dia 1</div>
-                    <div class="today-special__price">$99</div>
+                    <img src="img/plato1.jpg" alt="" class="gallery__img gallery__img--big">
+                    <img src="img/plato2.jpg" alt="" class="gallery__img gallery__img--small">
                 </div>
                 <div class="column column--50-25">
-                    <img src="img/img4.jpg" alt="" class="today-special__img">
-                    <div class="today-special__title">Especial del dia 2</div>
-                    <div class="today-special__price">$99</div>
+                    <img src="img/plato3.jpg" alt="" class="gallery__img gallery__img--small">
+                    <img src="img/plato4.jpg" alt="" class="gallery__img gallery__img--big">
                 </div>
                 <div class="column column--50-25">
-                    <img src="img/img5.jpg" alt="" class="today-special__img">
-                    <div class="today-special__title">Especial del dia 3</div>
-                    <div class="today-special__price">$99</div>
+                    <img src="img/plato5.jpg" alt="" class="gallery__img gallery__img--big">
+                    <img src="img/plato6.jpg" alt="" class="gallery__img gallery__img--small">
                 </div>
                 <div class="column column--50-25">
-                    <img src="img/img6.jpg" alt="" class="today-special__img">
-                    <div class="today-special__title">Especial del dia 4</div>
-                    <div class="today-special__price">$99</div>
+                    <img src="img/plato7.jpg" alt="" class="gallery__img gallery__img--small">
+                    <img src="img/plato8.jpg" alt="" class="gallery__img gallery__img--big">
                 </div>
             </div>
-        </section>
+        </div>
+
     </main>
 
     <footer class="main-footer">
@@ -138,6 +122,8 @@
     </footer>
 
     <script src="js/menu.js"></script>
+    <script src="js/modal.js"></script>
+
 </body>
 
 </html>
